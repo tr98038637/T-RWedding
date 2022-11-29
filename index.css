@@ -46,6 +46,7 @@
  text-shadow: 0 0 1rem #fff;
 }
 
+
 /*---Top & Message---*/
 #TopWrapper {
   padding-top: 4rem;
@@ -55,12 +56,12 @@
   width:100%;
 }
 
-#MsgWrapper {
+#MessageWrapper {
   margin: 10vh 0;
   line-height: 2;
 }
 
-#MsgWrapper i {
+#MessageWrapper i {
   color: #00b900;
   font-size: 1.5rem;
   padding: 0 0.25rem;
@@ -115,6 +116,8 @@
 
 /*---Time Schedule---*/
 .TimeSchedule {
+  overflow:initial;
+  margin: 0 auto;
   padding : 2rem;  
 }
 
@@ -268,7 +271,7 @@
  }
  
  .TimeSchedule {
-  overflow: scroll;
+  overflow-x: scroll;
   padding: 1rem; 
  }
 
@@ -284,3 +287,17 @@
  }
 }
  
+
+@media screen and (min-width: 680px) {
+  .TimeSchedule {
+    overflow-x: scroll;
+    padding: 1rem; 
+   }
+}
+
+@media screen and (min-width: 960px) {
+  .TimeSchedule {
+    overflow:initial;
+    padding : 2rem;  
+  }
+}
