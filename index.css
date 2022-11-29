@@ -83,6 +83,10 @@
   padding: 1rem;
 }
 
+.WeddingMethod h2 {
+  font-size: 1.5rem;;
+}
+
 #WeddingMethodPopupWrapper {
   display: none;
   position: fixed;
@@ -111,7 +115,11 @@
 
 /*---Time Schedule---*/
 .TimeSchedule {
-  padding : 2rem;
+  padding : 2rem;  
+}
+
+.TimeSchedule img {
+  max-width: 1170px;
 }
 
 
@@ -120,6 +128,12 @@
   max-width: 1170px;
   margin: 0 auto;
 }
+
+#DrinkMenu .MenuNames {
+  height: auto;
+  padding: .3rem 0;
+}
+
 
 #Menus {
   display: flex;
@@ -131,6 +145,11 @@
 .Menu {
   display: inline-block;
   width: 28rem;
+}
+
+.MenuOrder {
+  font-size: 1.25rem;
+  padding: 1rem;
 }
 
 .Menu img {
@@ -243,7 +262,7 @@
   top: 0.7rem;
   right: 0;
  }
- 
+
  .WeddingMethod p {
   display: none; 
  }
