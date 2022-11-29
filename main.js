@@ -28,11 +28,12 @@ window.onscroll=()=>{
 const Navs={
  "Message" : Id('MsgWrapper').getBoundingClientRect(),
  "Schedule" : Id('ScheduleWrapper').getBoundingClientRect(),
- "Menu" : Id('MenuWrapper').getBoundingClientRect()
+ "Menu" : Id('MenuWrapper').getBoundingClientRect(),
+ "Line" : Id('PhotosWrapper').getBoundingClientRect()
 }
 for(i=0;i<Class('NavbarItem').length;i++){
  let name=Class('NavbarItem')[i].innerText;
- Class('NavbarItem')[i].onclick=()=>scrollTo(Navs[name].x,Navs[name].y-150);
+ Class('NavbarItem')[i].onclick=()=>scrollTo(Navs[name].x,Navs[name].y-100);
 };
 
 WdgMthds.forEach(v=>v.onclick=(e=>{
@@ -41,5 +42,11 @@ WdgMthds.forEach(v=>v.onclick=(e=>{
 }));
 //Remove open class when clicked outside of Modal
 Id('WeddingMethodPopupWrapper').onclick=e=>e.target.closest('#WeddingMethodPopup')===null&&Id('WeddingMethodPopupWrapper').classList.remove('open');
-Id('MobileNavBtn').onclick=e=>Id('Navbar').classList.add('open');
-Id('NavWrapper').onclick=e=>e.target.closest('Navbar')===null&&Id('Navbar').classList.remove('open');
+Id('MobileNavBtn').onclick=e=>{
+ Id('Navbar').classList.add('open');
+ Id('NavWrapper').style="height:100vh;width:100vw";
+}
+Id('NavWrapper').onclick=e=>{
+ e.target.closest('Navbar')===null&&Id('Navbar').classList.remove('open');
+ Id('NavWrapper').style="";
+}

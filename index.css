@@ -1,5 +1,6 @@
 #Main {
   text-align: center;
+  font-family: 'Kaisei Decol';
 }
 #Logo {
   height: 2.5rem;
@@ -197,11 +198,6 @@
  #HeaderWrapper {
   text-align: center;
   display: inline-block;
- }
- 
- #NavWrapper {
-  width: 100vw;
-  height: 100vh;
  }
 
  #Navbar {
