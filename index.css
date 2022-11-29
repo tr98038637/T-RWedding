@@ -288,7 +288,7 @@
 }
  
 
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 520px) {
   .TimeSchedule {
     overflow-x: scroll;
     padding: 1rem; 
