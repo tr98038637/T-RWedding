@@ -26,14 +26,14 @@ window.onscroll=()=>{
 
 
 const Navs={
- "Message" : Id('MsgWrapper').getBoundingClientRect(),
- "Schedule" : Id('ScheduleWrapper').getBoundingClientRect(),
- "Menu" : Id('MenuWrapper').getBoundingClientRect(),
- "Line" : Id('PhotosWrapper').getBoundingClientRect()
+ "Message" : 'Msg',
+ "Schedule" : 'Schedule',
+ "Menu" : 'Menu',
+ "Line" : 'Photos'
 }
 for(i=0;i<Class('NavbarItem').length;i++){
  let name=Class('NavbarItem')[i].innerText;
- Class('NavbarItem')[i].onclick=()=>scrollTo(Navs[name].x,Navs[name].y-100);
+ Class('NavbarItem')[i].onclick=()=>scrollTo(0,Id(`${Navs[name]}Wrapper`).getBoundingClientRect().y+window.pageYOffset-100);
 };
 
 WdgMthds.forEach(v=>v.onclick=(e=>{
