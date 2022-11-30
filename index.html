@@ -36,30 +36,43 @@
       ぜひ最後までお読みください</p>
     <div id="WeddingMethodWrapper">
      <h2 class="Title">挙式の方法について</h2>
-     <div class="WeddingMethods">
-      <div class="WeddingMethod" onclick="console.log('hogehoge')">       
-       <img class="WeddingMethodImg" src="./img/Christ.png">
+     <div class="WeddingMethods">      
+      <div class="WeddingMethod">
+        <div class="WeddingMethodImgs">
+          <img class="WeddingMethodImg" src="./img/Christ.png">
+          <img class="WeddingMethodImg Popup" src="./img/BlideGroom.png">
+        </div>       
        <h2>キリスト教式</h2>
        <p>神父または牧師の前で愛を誓います</p>
+       <p class="WeddingMethodDsc">通常結婚式と聞いて<br class="mobile">イメージするのは　大抵<br class="mobile">「教会式」と呼ばれるものです<br>
+        日本でここまで定着したのは<br class="mobile">松田聖子さんの結婚式からだそうです</p>
       </div>
       <div class="WeddingMethod">
-       <img class="WeddingMethodImg" src="./img/Civil.png">
-       <h2>人前式</h2>
-       <p>皆様の前で愛を誓います</p>
+        <div class="WeddingMethodImgs">
+          <img class="WeddingMethodImg Popup" src="./img/lady.png">
+          <img class="WeddingMethodImg" src="./img/Civil.png">
+          <img class="WeddingMethodImg Popup" src="./img/gentleman.png">
+        </div>
+        <h2>人前式</h2>
+        <p>皆様の前で愛を誓います</p>
+        <p class="WeddingMethodDsc">披露宴会場内でも実施できるため　<br class="mobile">会場移動がなく内容にも制限の少ない<br>
+          この方法が私たちにピッタリだと思い<br class="mobile">この方法を選びました</p>
       </div>
       <div class="WeddingMethod">
-       <img class="WeddingMethodImg" src="./img/Shinto.png">
+       <div class="WeddingMethodImgs">
+        <img class="WeddingMethodImg" src="./img/Shinto.png">
+        <img class="WeddingMethodImg Popup" src="./img/ShintoWedding.png">
+       </div>       
        <h2>神道式</h2>
        <p>八百万の神の前で愛を誓います</p>
+       <p class="WeddingMethodDsc">和装での婚姻はこちらの方法が主です<br>
+        現在の形での神道式は　<br class="mobile">大正天皇のご成婚が<br class="mobile">最初といわれています</p>
       </div>
      </div>
+     <div id="WeddingMethodPopupWrapper"></div>
+     <button id="WeddingMethodclosebtn">✖</button>
     </div>
-   </div>
-   <div id="WeddingMethodPopupWrapper">
-    <div id="WeddingMethodPopup">
-      hogehoge
-    </div>
-   </div> 
+   </div>    
    <div id="ScheduleWrapper">
     <div id="TimeScheduleWrapper">
      <h2 class="TimeScheduleTitle Title">本日のスケジュール</h2>
@@ -69,7 +82,7 @@
     </div>
    </div>   
    <div id="MenuWrapper">
-    <!--<div class="MenuBtn drink"><span>🥤</span></div> -->
+    <!--<div class="MenuBtn drink"><button>🥤</button></div> -->
     <div id="FoodMenu">
         <h2 class="Title">本日のお料理</h2>
         <div id="Menus">

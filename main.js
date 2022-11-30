@@ -6,8 +6,7 @@ const scrollTo=(x,y)=>{
  });
 },
 Id=(e)=>document.getElementById(e),
-Class=(e)=>document.getElementsByClassName(e),
-WdgMthds=Array.from(Class('WeddingMethod'));
+Class=(e)=>document.getElementsByClassName(e);
 
 //Scrolls
 Id('Logo').onclick=()=>scrollTo(0,0);
@@ -29,12 +28,21 @@ for(i=0;i<Class('NavbarItem').length;i++){
  Class('NavbarItem')[i].onclick=()=>scrollTo(0,Id(`${name}Wrapper`).getBoundingClientRect().y+window.pageYOffset-100);
 };
 
-WdgMthds.forEach(v=>v.onclick=(e=>{
- Id("WeddingMethodPopupWrapper").classList.add('open');
- console.log(e.target.src.split('/').pop());
+//Open Popup & set background be full screen
+Array.from(Class('WeddingMethod')).forEach(v=>v.onclick=(e=>{
+ e.target.closest('.WeddingMethod').classList.add('open');
+ Id('WeddingMethodPopupWrapper').classList.add('open');
+ Id('WeddingMethodclosebtn').classList.add('open');
 }));
-//Remove open class when clicked outside of Modal
-Id('WeddingMethodPopupWrapper').onclick=e=>e.target.closest('#WeddingMethodPopup')===null&&Id('WeddingMethodPopupWrapper').classList.remove('open');
+//Close Popup & set background be full screen
+Id('WeddingMethodPopupWrapper').onclick=()=>{
+ Id('WeddingMethodPopupWrapper').classList.remove('open');
+ Class('WeddingMethod open')[0].classList.remove('open'); 
+ Id('WeddingMethodclosebtn').classList.remove('open');
+}
+Id('WeddingMethodclosebtn').onclick=()=>Id('WeddingMethodPopupWrapper').click();
+
+
 Id('MobileNavBtn').onclick=e=>{
  Id('Navbar').classList.add('open');
  Id('NavWrapper').style="height:100vh;width:100vw";
