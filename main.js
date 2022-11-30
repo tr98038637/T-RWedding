@@ -40,3 +40,11 @@ Id('WeddingMethodPopupWrapper').onclick=()=>{
 
 Id('MobileNavBtn').onclick=e=>Id('NavWrapper').classList.add('open');
 Id('NavWrapper').onclick=e=>e.target.closest('Navbar')===null&&Id('NavWrapper').classList.remove('open');
+Id('DrinkBtn').onclick=()=>{
+ Id('DrinkMenu').classList.add('active');
+ Id('FoodMenu').classList.remove('active');
+}
+Id('FoodBtn').onclick=()=>{
+ Id('FoodMenu').classList.add('active');
+ Id('DrinkMenu').classList.remove('active');
+}

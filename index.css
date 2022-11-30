@@ -74,6 +74,7 @@
 .WeddingMethod {
   display: inline-block;
   padding: 1.5rem;
+  cursor: pointer;
 }
 
 .WeddingMethod.open {
@@ -174,6 +175,18 @@
   padding: .3rem 0;
 }
 
+#FoodMenu, #DrinkMenu {
+  display: none;
+}
+
+#FoodBtn, #DrinkBtn {
+  font-size: 1rem;
+  font-family: 'Kaisei Decol';
+}
+
+#FoodMenu.active,  #DrinkMenu.active {
+  display: inline-block;
+}
 
 #Menus {
   display: flex;
