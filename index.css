@@ -93,15 +93,15 @@
   display:inline-block;
 }
 
-#WeddingMethodclosebtn {
+.WeddingMethodclosebtn {
   display: none;
 }
 
-#WeddingMethodclosebtn.open {
+.WeddingMethod.open .WeddingMethodclosebtn {
   display: inline-block;
   position: fixed;
-  right: 8vw;
-  top: 20vh;
+  right: .5rem;
+  top: 1rem;
   transform: translate(-50%, -50%);
   font-size: 1.2rem;
   z-index: 500;
@@ -113,7 +113,6 @@
 
 .WeddingMethodImg.Popup {
   display: none;
-  width: 10vw;
 }
 
 .WeddingMethod p {
@@ -260,6 +259,11 @@
   display: inline-block;
  }
 
+ #NavWrapper.open {
+  width: 100vw;
+  height: 100vh;
+ }
+
  #Navbar {
   display: none;
   flex-direction: column;
@@ -272,7 +276,7 @@
   padding: 1.5rem;
  }
 
- #Navbar.open {
+ #NavWrapper.open #Navbar {
   display: flex;
   z-index: 100;
  }
@@ -313,7 +317,7 @@
  }
 
  .WeddingMethod.open .WeddingMethodImg.Popup {
-  width: 5rem;
+  width: 4.5rem;
  }
  
  .TimeSchedule {

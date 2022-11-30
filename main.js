@@ -23,31 +23,20 @@ window.onscroll=()=>{
  fromTop!==0&&Id('Main').appendChild(ToTop)||ToTop.remove();
 }
 
-for(i=0;i<Class('NavbarItem').length;i++){
- let name=Class('NavbarItem')[i].innerText;
- Class('NavbarItem')[i].onclick=()=>scrollTo(0,Id(`${name}Wrapper`).getBoundingClientRect().y+window.pageYOffset-100);
-};
+//Set up Navigation Bar Scroll function
+Array.from(Class('NavbarItem')).forEach(v=>v.onclick=()=>scrollTo(0,Id(`${v.innerText}Wrapper`).getBoundingClientRect().y+window.pageYOffset-100));
 
-//Open Popup & set background be full screen
-Array.from(Class('WeddingMethod')).forEach(v=>v.onclick=(e=>{
+//Open Popup & set background be full screen & close if clicked element is close button
+Array.from(Class('WeddingMethod')).forEach(v=>v.onclick=(e=>{ 
  e.target.closest('.WeddingMethod').classList.add('open');
- Id('WeddingMethodPopupWrapper').classList.add('open');
- Id('WeddingMethodclosebtn').classList.add('open');
+ Id('WeddingMethodPopupWrapper').classList.add('open'); 
+ if(e.target.closest('.WeddingMethodclosebtn'))Id('WeddingMethodPopupWrapper').click();
 }));
 //Close Popup & set background be full screen
 Id('WeddingMethodPopupWrapper').onclick=()=>{
- Id('WeddingMethodPopupWrapper').classList.remove('open');
  Class('WeddingMethod open')[0].classList.remove('open'); 
- Id('WeddingMethodclosebtn').classList.remove('open');
-}
-Id('WeddingMethodclosebtn').onclick=()=>Id('WeddingMethodPopupWrapper').click();
+ Id('WeddingMethodPopupWrapper').classList.remove('open');
+};
 
-
-Id('MobileNavBtn').onclick=e=>{
- Id('Navbar').classList.add('open');
- Id('NavWrapper').style="height:100vh;width:100vw";
-}
-Id('NavWrapper').onclick=e=>{
- e.target.closest('Navbar')===null&&Id('Navbar').classList.remove('open');
- Id('NavWrapper').style="";
-}
+Id('MobileNavBtn').onclick=e=>Id('NavWrapper').classList.add('open');
+Id('NavWrapper').onclick=e=>e.target.closest('Navbar')===null&&Id('NavWrapper').classList.remove('open');
