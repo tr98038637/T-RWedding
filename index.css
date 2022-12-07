@@ -188,7 +188,7 @@
   display: inline-block;
 }
 
-#Menus {
+#FoodMenus, #DrinkMenus {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -356,14 +356,22 @@
     overflow-x: scroll;
     padding: 1rem; 
    }
+
+   .WeddingMethod.open {
+    width: 85vw;
+   }
+   
    .WeddingMethod.open .Popup {
     width: 9rem;
-  }
+   }
 }
 
 @media screen and (min-width: 960px) {
   .TimeSchedule {
     overflow:initial;
     padding : 2rem;  
-  }  
+  }
+  .WeddingMethod.open {
+    width: auto;
+  }
 }
