@@ -90,8 +90,7 @@
 }
 
 .WeddingMethod.open .Popup {
-  display: inline-block;
-  width: 12rem;
+  display:inline-block;
 }
 
 .WeddingMethodclosebtn {
@@ -370,8 +369,5 @@
   .TimeSchedule {
     overflow:initial;
     padding : 2rem;  
-  }
-  .WeddingMethod.open {
-    width: auto;
-  }
+  }  
 }
